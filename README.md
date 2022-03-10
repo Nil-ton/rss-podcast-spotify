@@ -17,7 +17,7 @@ yarn dev
 
 É o domínio da aplicação, os dados com o id de cada podcast do Spotify, você pode conseguir esse id entrando no Spotify e pegando o caminho.
 
--- exemplo: https://open.spotify.com/show/*6MsFZgRpVBRrHwKQMjCIfJ*
+-- exemplo: https://open.spotify.com/show/**6MsFZgRpVBRrHwKQMjCIfJ**
 
 ```
 import { IPodcastSpotifyFeed } from "./types";
@@ -48,7 +48,7 @@ export const PodcastSpotifyFeed:IPodcastSpotifyFeed = [
 
 * src/useCase/generationRssFeed/index.ts
 
-É o domínio da aplicação, os dados com o id de cada podcast do Spotify, você pode conseguir esse id entrando no Spotify e pegando o caminho. 
+Aqui está meu caso de uso. O **RssToJson** é uma class com a biblioteca que utilizei para transformar o RSS em JSON, ela tem um metodo que pega os ids dos podcast e me retornar um array com todos os dados.
 ```
 import { RssToJson } from "../../infra/RssToJson";
 import { GenerationRssFeedController } from "./GenerationRssFeedController";

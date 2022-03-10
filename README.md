@@ -4,6 +4,7 @@ O objetivo é converte os dados RSS dos podcasts do Spotify em JSON.
 ## instalação
 ```
 # clone o projeto
+git clone https://github.com/Nil-ton/rss-podcast-spotify.git
 
 # instale as dependências
 npm install
@@ -60,7 +61,7 @@ const generationRssFeedController = new GenerationRssFeedController(generationRs
 
 export {generationRssFeedUseCase, generationRssFeedController}
 ```
-### Metodo do RssToJson
+### Metodo implementado no RssToJson
 * src/infra/types.ts
 
 ```

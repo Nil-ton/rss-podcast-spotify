@@ -17,7 +17,7 @@ yarn dev
 
 É o domínio da aplicação, os dados com o id de cada podcast do Spotify, você pode conseguir esse id entrando no Spotify e pegando o caminho.
 
--- exemplo: https://open.spotify.com/show/**6MsFZgRpVBRrHwKQMjCIfJ**
+-- exemplo: https://open.spotify.com/show/<strong>6MsFZgRpVBRrHwKQMjCIfJ</strong>
 
 ```
 import { IPodcastSpotifyFeed } from "./types";

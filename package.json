@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "dev:test": "jest --watchAll",
     "dev": "ts-node ./src/server.ts",
-    "build": "tsc",
+    ":dev:build": "tsc",
     "start": "node ./dist/src/server.js"
   },
   "keywords": [],

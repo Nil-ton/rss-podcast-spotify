@@ -9,12 +9,14 @@ const generationRssFeed = async (podcasts: IPodcastSpotifyFeed) => {
 
     for (const podcast of podcasts) {
         const rssGeneation = await parse(`${podcast.url}`, {})
+        if (!rssGeneation) {
+            generationRssFeedDatas.push({message: `Podcast ${podcast.name} not found`})
+        }
         generationRssFeedDatas.push(rssGeneation)
     }
-    
+
     return generationRssFeedDatas
 }
-
 
 
 

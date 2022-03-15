@@ -5,10 +5,14 @@ export interface IRssParse {
 }
 
 export type IRssFeeds =  {
-    title: any;
-    description: any;
-    link: any;
-    image: any;
-    category: any;
-    items: any[];
+    title?: any;
+    description?: any;
+    link?: any;
+    image?: any;
+    category?: any;
+    items?: any[];
+    error?: {
+        message: string,
+        error: Error
+    }
 }

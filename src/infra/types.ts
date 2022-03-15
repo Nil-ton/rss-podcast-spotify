@@ -1,4 +1,4 @@
-import { IPodcastSpotifyFeed } from "../domain/types";
+import { IPodcastSpotifyFeed } from "./podcasts/types";
 
 export interface IRssParse {
     parseFeed(urls: IPodcastSpotifyFeed):Promise<IRssFeeds[]>

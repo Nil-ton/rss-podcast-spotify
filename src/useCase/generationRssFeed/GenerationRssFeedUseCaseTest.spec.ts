@@ -1,5 +1,5 @@
 import { generationRssFeedUseCase } from "."
-import { PodcastSpotifyFeed } from "../../domain/PodcastSpotifyFeed"
+import { PodcastSpotifyFeed } from "../../infra/podcasts/PodcastSpotifyFeed"
 
 describe('Generate rss feeds of spotify', () => {
     it('should be able to generate rss feeds', async () => {

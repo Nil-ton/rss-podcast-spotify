@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PodcastSpotifyFeed } from "../../domain/PodcastSpotifyFeed";
+import { PodcastSpotifyFeed } from "../../infra/podcasts/PodcastSpotifyFeed";
 import { GenerationRssFeedUseCase } from "./GenerationRssFeedUseCase";
 
 export class GenerationRssFeedController {

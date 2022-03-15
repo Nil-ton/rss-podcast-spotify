@@ -1,27 +1,28 @@
 import { parse } from 'rss-to-json'
-import { IPodcastSpotifyFeed } from '../domain/types'
-import { IRssParse } from './types'
+import { IPodcastSpotifyFeed } from './podcasts/types'
+import { IRssFeeds, IRssParse } from './types'
+
+
+
+const generationRssFeed = async (podcasts: IPodcastSpotifyFeed) => {
+    const generationRssFeedDatas = []
+
+    for (const podcast of podcasts) {
+        const rssGeneation = await parse(`${podcast.url}`, {})
+        generationRssFeedDatas.push(rssGeneation)
+    }
+    
+    return generationRssFeedDatas
+}
+
+
+
 
 export class RssToJson implements IRssParse {
-    async parseFeed(podcasts: IPodcastSpotifyFeed) {
-        try {
-            const generationRssFeed = async () => {
-                const generationRssFeedDatas = []
-                for (const url of podcasts) {
-                    const rssGeneation = await parse(`${url}`, {})
-                    generationRssFeedDatas.push(rssGeneation)
-                }
-                return generationRssFeedDatas
-            }
+    async parseFeed(podcasts: IPodcastSpotifyFeed): Promise<IRssFeeds[]> {
 
-            if(!await generationRssFeed()){
-                throw new Error('urls is not valid')
-            }
+        const podcastData = await generationRssFeed(podcasts)
 
-            return (await generationRssFeed())
-        } catch (error) {
-            throw new Error(error.message)
-        }
+        return podcastData
     }
-
 }

@@ -1,4 +1,4 @@
-import { IPodcastSpotifyFeed } from "../../domain/types";
+import { IPodcastSpotifyFeed } from "../../infra/podcasts/types";
 import { IRssParse } from "../../infra/types";
 
 export class GenerationRssFeedUseCase {

@@ -1,4 +1,4 @@
-import { PodcastSpotifyFeed } from "../domain/PodcastSpotifyFeed"
+import { PodcastSpotifyFeed } from "./podcasts/PodcastSpotifyFeed"
 import { RssToJson } from "./RssToJson"
 
 describe('RssToJson test', () => {

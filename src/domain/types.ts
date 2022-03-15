@@ -1,4 +1,4 @@
 export type IPodcastSpotifyFeed = {
     name: string;
-    id: string;
+    url: string;
 }[]

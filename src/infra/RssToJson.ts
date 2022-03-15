@@ -3,12 +3,12 @@ import { IPodcastSpotifyFeed } from '../domain/types'
 import { IRssParse } from './types'
 
 export class RssToJson implements IRssParse {
-    async parseFeed(urls: IPodcastSpotifyFeed) {
+    async parseFeed(podcasts: IPodcastSpotifyFeed) {
         try {
             const generationRssFeed = async () => {
                 const generationRssFeedDatas = []
-                for (const url of urls) {
-                    const rssGeneation = await parse(`https://spotifeed.timdorr.com/${url.id}`, {})
+                for (const url of podcasts) {
+                    const rssGeneation = await parse(`${url}`, {})
                     generationRssFeedDatas.push(rssGeneation)
                 }
                 return generationRssFeedDatas

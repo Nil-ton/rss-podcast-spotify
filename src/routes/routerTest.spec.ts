@@ -4,7 +4,6 @@ import { app } from '../app'
 describe("Test router", () => {
     it("GET '/'", async () => {
         const sut = await request(app).get('/')
-        
         expect(sut.statusCode).toEqual(200)
-    })
+    }, 1000 * 60  /*1 min*/)
 })

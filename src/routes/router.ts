@@ -1,6 +1,9 @@
 import { Router } from "express";
-import { generationRssFeedController } from "../useCase/generationRssFeed";
+import { getPodcastDataController } from "../useCase/GetPodcastData";
+
 
 export const router = Router()
 
-router.get('/', async (req,res) => await generationRssFeedController.handle(req,res))
+router.get('/', async (req,res) => {
+    await getPodcastDataController.handle(req,res)
+})

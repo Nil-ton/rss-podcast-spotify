@@ -13,7 +13,7 @@ export class GetPodcastDataUseCase {
             const filterData = data.rss.channel
             
             allData.push({
-                title: filterData.title._text || filterData.title._cdata,
+                title: filterData.title._text|| filterData.title._cdata.trim(),
                 description: filterData.description._text || filterData.description._cdata,
                 image: filterData['itunes:image']._attributes.href || filterData.image.url._text,
                 copyright: filterData.copyright._text || filterData.copyright._cdata,

@@ -1,5 +1,3 @@
-import xml2js from 'xml2js'
-import convert from 'xml-js'
 import parser from 'xml2json'
 
 export class XmlToJson {

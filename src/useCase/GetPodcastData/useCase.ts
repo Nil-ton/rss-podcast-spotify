@@ -23,7 +23,7 @@ export class GetPodcastDataUseCase {
                     duration: item['itunes:duration']._text,
                     enclosure: item.enclosure._attributes.url,
                     pubDate: item.pubDate._text,
-                    description: item.description._cdata
+                    description: item.description
                 }))
             })
         }

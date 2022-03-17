@@ -1,11 +1,12 @@
 import xml2js from 'xml2js'
 import convert from 'xml-js'
+import parser from 'xml2json'
 
 export class XmlToJson {
     constructor() { }
     async parser(nameOfPodcast: string) {
-        const parser = JSON.parse(convert.xml2json(nameOfPodcast, { compact: true, spaces: 4 }))
-        return parser
+        const jsonParser = JSON.parse(parser.toJson(nameOfPodcast))
+        return jsonParser
     }
 }
 const xmlToJson = new XmlToJson()

@@ -18,12 +18,12 @@ export class GetPodcastDataUseCase {
                 image: filterData['itunes:image']._attributes.href || filterData.image.url._text,
                 copyright: filterData.copyright._text || filterData.copyright._cdata,
                 item: filterData.item.map(item => ({
-                    title: item.title._text,
+                    title: item.title._text || item.title._cdata,
                     image: item['itunes:image']._attributes.href,
                     duration: item['itunes:duration']._text,
                     enclosure: item.enclosure._attributes.url,
                     pubDate: item.pubDate._text,
-                    description: item.description
+                    description: item.description._cdata
                 }))
             })
         }

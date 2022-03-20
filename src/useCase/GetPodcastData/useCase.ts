@@ -22,7 +22,8 @@ export class GetPodcastDataUseCase {
                     description: episodio.description,
                     duration: episodio['itunes:duration'],
                     pubDate: episodio.pubDate,
-                    enclosure: episodio.enclosure.url
+                    enclosure: episodio.enclosure.url,
+                    image: episodio['itunes:image'].href
                 }))
             })
         }
